@@ -6,5 +6,27 @@
 
 config_version: 2
 settings:
-  content.notifications.enabled:
-    https://www.youtube.com: false
+  bindings.commands:
+    global:
+      insert:
+        <Alt+b>: fake-key <Ctrl-Left>
+        <Alt+d>: fake-key <Ctrl-Delete>
+        <Alt+f>: fake-key <Ctrl-Right>
+        <Ctrl+a>: fake-key <Home>
+        <Ctrl+b>: fake-key <Left>
+        <Ctrl+d>: fake-key <Delete>
+        <Ctrl+e>: fake-key <End>
+        <Ctrl+f>: fake-key <Right>
+        <Ctrl+h>: fake-key <Backspace>
+        <Ctrl+k>: fake-key <Shift-End><Delete>
+        <Ctrl+n>: fake-key <Down>
+        <Ctrl+p>: fake-key <Up>
+        <Ctrl+u>: fake-key <Shift-Home><Delete>
+        <Ctrl+w>: fake-key <Ctrl-backspace>
+        <Ctrl+x><Ctrl+e>: edit-text
+      normal:
+        +: zoom
+        <Ctrl+n>: fake-key <Tab> command
+        <Ctrl+p>: fake-key <Shift-Tab>
+        <Ctrl+q>: q
+        '=': zoom-in
