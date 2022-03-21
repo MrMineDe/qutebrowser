@@ -60,11 +60,16 @@ c.aliases = {
 }
 
 # Set default pages
-#c.auto_save.session = True
+c.auto_save.session = True
 c.url.default_page = "https://search.brave.com/"
-c.url.start_pages = [
-    "https://search.brave.com/"
-]
+#c.url.start_pages = [
+#    "https://www.youtube.com/watch?v=Q089i8RQPB0&list=TLPQMjAwMzIwMjLEMOiBhpGO4A&index=2",
+#    "https://www.youtube.com/watch?v=74zOY-vgkyw&list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ",
+#    "https://www.youtube.com/watch?v=dtuy09mqBPI&list=TLPQMjEwMzIwMjL561TkmBaB3A",
+#    "https://wiki.archlinux.org/title/Xinit",
+#    "https://awesomewm.org/doc/api/classes/wibox.widget.separator.html",
+#    "https://github.com/NYANLAUNCHER/.emacs.d"
+#]
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -88,8 +93,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
     'aw': 'https://wiki.archlinux.org/?search={}', 
-    'gh': 'https://github.com/search?q={}',
-    'ghp': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
+    'gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     'lt': 'https://lutris.net/games?q={}',
     'st': 'https://store.steampowered.com/search/?term={}'
 }
