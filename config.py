@@ -60,16 +60,11 @@ c.aliases = {
 }
 
 # Set default pages
-c.auto_save.session = True
+#c.auto_save.session = True
 c.url.default_page = "https://search.brave.com/"
-if c.auto_save.session == False:
-    c.url.start_pages = [
-        "https://www.qutebrowser.org",
-        "qute://help/commands.html",
-        "qute://help/settings.html",
-        "qute://help/img/cheatsheet-big.png",
-        "https://awesomewm.org/doc/api/libraries/awful.rules.html"
-    ]
+c.url.start_pages = [
+    "https://search.brave.com/"
+]
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
