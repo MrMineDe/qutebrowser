@@ -240,16 +240,18 @@ config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
 config.bind("<Ctrl-q>", "q")
-#config.bind("<Ctrl-n>", "fake-key <Tab>", "command")
-#config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
+config.bind("<Ctrl-n>", "fake-key <Down>", "command")
+config.bind("<Ctrl-p>", "fake-key <Up>", "command")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
 ## view yt vid with viewer.video = "mpv"
-#config.bind("M", "hint links spawn " + viewer.video + " {hint-url}")
+#config.bind("", "hint links spawn " + viewer.video + " {hint-url}")
 ## Hide tabs and cmdline
 #config.bind("xx", "config-cycle tabs.show always never;; config-cycle statusbar.show always never")
 config.bind("=", "zoom-in")
 config.bind("+", "zoom")
+config.bind("<Ctrl-k", "tab-move +")
+config.bind("<Ctrl-j", "tab-move -")
 ## Insert mode bindings
 config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
 config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
