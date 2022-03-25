@@ -55,21 +55,16 @@ c.aliases = {
     "w": "session-save", 
     "wq": "quit --save", 
     "wqa": "quit --save", 
+    "sd": "session-delete",
+    "ss": "session-save",
+    "sl": "session-load",
     "so": "config-source",
     "h": "help"
 }
 
 # Set default pages
-c.auto_save.session = True
+c.auto_save.session = False
 c.url.default_page = "https://search.brave.com/"
-#c.url.start_pages = [
-#    "https://www.youtube.com/watch?v=Q089i8RQPB0&list=TLPQMjAwMzIwMjLEMOiBhpGO4A&index=2",
-#    "https://www.youtube.com/watch?v=74zOY-vgkyw&list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ",
-#    "https://www.youtube.com/watch?v=dtuy09mqBPI&list=TLPQMjEwMzIwMjL561TkmBaB3A",
-#    "https://wiki.archlinux.org/title/Xinit",
-#    "https://awesomewm.org/doc/api/classes/wibox.widget.separator.html",
-#    "https://github.com/NYANLAUNCHER/.emacs.d"
-#]
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -101,6 +96,7 @@ c.editor.encoding = "utf-8"
 
 # Set download settings
 c.downloads.location.directory = "~/tmp/downloads"
+c.downloads.remove_finished = 3
 
 # Set dark mode
 config.set("colors.webpage.darkmode.enabled", True)
@@ -239,13 +235,11 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
-config.bind("<Ctrl-q>", "q")
-config.bind("<Ctrl-n>", "fake-key <Down>", "command")
-config.bind("<Ctrl-p>", "fake-key <Up>", "command")
+config.bind("<Ctrl-q>", "wq")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
 ## view yt vid with viewer.video = "mpv"
-#config.bind("", "hint links spawn " + viewer.video + " {hint-url}")
+config.bind(",v", "hint links spawn " + viewer.video + " {hint-url}")
 ## Hide tabs and cmdline
 #config.bind("xx", "config-cycle tabs.show always never;; config-cycle statusbar.show always never")
 config.bind("=", "zoom-in")
@@ -253,19 +247,23 @@ config.bind("+", "zoom")
 config.bind("<Ctrl-k", "tab-move +")
 config.bind("<Ctrl-j", "tab-move -")
 ## Insert mode bindings
-config.bind("<Ctrl-h>", "fake-key <Backspace>", "insert")
-config.bind("<Ctrl-a>", "fake-key <Home>", "insert")
-config.bind("<Ctrl-e>", "fake-key <End>", "insert")
-config.bind("<Ctrl-b>", "fake-key <Left>", "insert")
-config.bind("<Alt-b>", "fake-key <Ctrl-Left>", "insert")
-config.bind("<Ctrl-f>", "fake-key <Right>", "insert")
-config.bind("<Alt-f>", "fake-key <Ctrl-Right>", "insert")
-config.bind("<Ctrl-p>", "fake-key <Up>", "insert")
-config.bind("<Ctrl-n>", "fake-key <Down>", "insert")
-config.bind("<Alt-d>", "fake-key <Ctrl-Delete>", "insert")
-config.bind("<Ctrl-d>", "fake-key <Delete>", "insert")
-config.bind("<Ctrl-w>", "fake-key <Ctrl-backspace>", "insert")
+config.bind("<Ctrl-h>", "fake-key <Backspace>",          "insert")
+config.bind("<Ctrl-a>", "fake-key <Home>",               "insert")
+config.bind("<Ctrl-e>", "fake-key <End>",                "insert")
+config.bind("<Ctrl-b>", "fake-key <Left>",               "insert")
+config.bind("<Alt-b>",  "fake-key <Ctrl-Left>",          "insert")
+config.bind("<Ctrl-f>", "fake-key <Right>",              "insert")
+config.bind("<Alt-f>",  "fake-key <Ctrl-Right>",         "insert")
+config.bind("<Ctrl-p>", "fake-key <Up>",                 "insert")
+config.bind("<Ctrl-n>", "fake-key <Down>",               "insert")
+config.bind("<Alt-d>",  "fake-key <Ctrl-Delete>",        "insert")
+config.bind("<Ctrl-d>", "fake-key <Delete>",             "insert")
+config.bind("<Ctrl-w>", "fake-key <Ctrl-backspace>",     "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
-config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>", "insert")
-config.bind("<Ctrl-x><Ctrl-e>", "edit-text", "insert")
-
+config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
+config.bind("<Ctrl-x><Ctrl-e>", "edit-text",             "insert")
+## Command mode bindings
+config.unbind("<Ctrl-n>", "command")
+config.unbind("<Ctrl-p>", "command")
+config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
+config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")

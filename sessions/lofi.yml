@@ -1,0 +1,110 @@
+windows:
+- geometry: !!binary |
+    AdnQywADAAAAAAAGAAAAGwAAB3kAAAQxAAAABwAAABwAAAd4AAAEMAAAAAAAAAAAB4AAAAAHAAAA
+    HAAAB3gAAAQw
+  tabs:
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:38'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: (60930) Linux gaming is better than Windows sometimes - YouTube
+      url: https://www.youtube.com/watch?v=i9Op7Xa5eKs&list=TLPQMjUwMzIwMjIfM-cjWm-fpg&index=3
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:38'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: '(60930) Emacs From Scratch #3 - Key Bindings and Evil - YouTube'
+      url: https://www.youtube.com/watch?v=xaZMwNELaJY&list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ&index=6
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1464
+      title: 'RapidJSON: Stream'
+      url: https://rapidjson.org/md_doc_stream.html#FileStreams
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: What is a file pointer in C language? - Quora
+      url: https://www.quora.com/What-is-a-file-pointer-in-C-language
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: Output functions
+      url: https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/printw.html
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 1110
+      title: ncurses 3x
+      url: https://invisible-island.net/ncurses/man/ncurses.3x.html#h3-Initialization
+      zoom: 1.0
+  - history:
+    - active: true
+      last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: The XKB Configuration Guide
+      url: https://www.x.org/releases/X11R7.7/doc/xorg-docs/input/XKB-Config.html
+      zoom: 1.0
+  - active: true
+    history:
+    - last_visited: '2022-03-25T10:30:36'
+      pinned: false
+      title: Rhythm game - Wikipedia
+      url: https://en.wikipedia.org/wiki/Rhythm_game
+    - active: true
+      last_visited: '2022-03-25T10:39:46'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 27608
+      title: Commands
+      url: qute://help/commands.html#session-delete
+      zoom: 1.0
+- active: true
+  geometry: !!binary |
+    AdnQywADAAAAAAAGAAAAGwAAB3kAAAQxAAAABwAAABwAAAd4AAAEMAAAAAAAAAAAB4AAAAAHAAAA
+    HAAAB3gAAAQw
+  tabs:
+  - active: true
+    history:
+    - last_visited: '2022-03-25T10:31:15'
+      pinned: false
+      title: DuckDuckGo — Privacy, simplified.
+      url: https://start.duckduckgo.com/
+    - active: true
+      last_visited: '2022-03-25T10:31:19'
+      pinned: false
+      scroll-pos:
+        x: 0
+        y: 0
+      title: (60930) lofi hip hop radio - beats to relax/study to - YouTube
+      url: https://www.youtube.com/watch?v=5qap5aO4i9A
+      zoom: 1.0
