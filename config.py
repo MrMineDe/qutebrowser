@@ -51,15 +51,16 @@ config.load_autoconfig(False)
 # Set aliases
 c.aliases = {
     "q": "close",
-    "qa": "quit", 
-    "w": "session-save", 
-    "wq": "quit --save", 
-    "wqa": "quit --save", 
+    "w": "session-save",
+    "wq": "close --save",
+    "qa": "quit",
+    "wqa": "quit --save",
     "sd": "session-delete",
     "ss": "session-save",
     "sl": "session-load",
     "so": "config-source",
-    "h": "help"
+    "h": "help",
+    "H": "help -t"
 }
 
 # Set default pages
@@ -87,7 +88,7 @@ c.url.default_page = "https://search.brave.com/"
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
-    'aw': 'https://wiki.archlinux.org/?search={}', 
+    'aw': 'https://wiki.archlinux.org/?search={}',
     'gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     'lt': 'https://lutris.net/games?q={}',
     'st': 'https://store.steampowered.com/search/?term={}'
@@ -96,9 +97,10 @@ c.editor.encoding = "utf-8"
 
 # Set download settings
 c.downloads.location.directory = "~/tmp/downloads"
-c.downloads.remove_finished = 3
+c.downloads.remove_finished = 3 #seconds
 
 # Set dark mode
+## TODO: create blacklist to disable theme in certain webpages
 config.set("colors.webpage.darkmode.enabled", True)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
