@@ -50,21 +50,22 @@ config.load_autoconfig(False)
 
 # Set aliases
 c.aliases = {
-    "q": "close",
+    "q": "close",# close current instance
+    "qa": "quit",# close all instances
+    "wqa": "quit --save",# save and close all instances
     "w": "session-save",
-    "wq": "close --save",
-    "qa": "quit",
-    "wqa": "quit --save",
     "sd": "session-delete",
-    "ss": "session-save",
     "sl": "session-load",
     "so": "config-source",
     "h": "help",
     "H": "help -t"
 }
 
-# Set default pages
-c.auto_save.session = False
+# Auto save settings
+c.auto_save.session = True
+c.auto_save.interval = 15000
+
+# Set default page
 c.url.default_page = "https://search.brave.com/"
 
 # Search engines which can be used via the address bar.  Maps a search
@@ -87,17 +88,20 @@ c.url.default_page = "https://search.brave.com/"
 # Type: Dict
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
-    'yt': 'https://www.youtube.com/results?search_query={}',
-    'aw': 'https://wiki.archlinux.org/?search={}',
-    'gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
-    'lt': 'https://lutris.net/games?q={}',
-    'st': 'https://store.steampowered.com/search/?term={}'
+    '/yt': 'https://www.youtube.com/results?search_query={}',
+    '/aw': 'https://wiki.archlinux.org/?search={}',
+    '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
+    '/lt': 'https://lutris.net/games?q={}',
+    '/st': 'https://store.steampowered.com/search/?term={}'
 }
 c.editor.encoding = "utf-8"
 
 # Set download settings
 c.downloads.location.directory = "~/tmp/downloads"
 c.downloads.remove_finished = 3 #seconds
+
+# Set content settings
+c.content.autoplay = False
 
 # Set dark mode
 ## TODO: create blacklist to disable theme in certain webpages
@@ -237,13 +241,14 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
-config.bind("<Ctrl-q>", "wq")
+config.bind("<Ctrl-q>", "close")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
-## view yt vid with viewer.video = "mpv"
+##view yt vid with viewer.video = "mpv"
 config.bind(",v", "hint links spawn " + viewer.video + " {hint-url}")
-## Hide tabs and cmdline
+##hide tabs and cmdline
 #config.bind("xx", "config-cycle tabs.show always never;; config-cycle statusbar.show always never")
+config.bind("-", "zoom-out")
 config.bind("=", "zoom-in")
 config.bind("+", "zoom")
 config.bind("<Ctrl-k", "tab-move +")
