@@ -1,6 +1,9 @@
 
 - TODO:
   - set content autoplay true for only the current window
+  - set blacklist to NOT load colors(cheme)
   - userscripts to load|manage sessions
+   - one master session which isn't affected by the other ones
   - ; = : && : = ;
+  - set j|k to scroll by default, not change volume in yt
   - greasemonkey script(s) to block ads

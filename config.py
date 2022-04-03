@@ -92,6 +92,7 @@ c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     # search github.com with the DEFAULT search engine
     '/sgh': 'https://search.brave.com/search?q=' + "site%3Agithub.com {}",
+    '/sgl': 'https://search.brave.com/search?q=' + "site%3Agitlab.com {}",
     '/yt': 'https://www.youtube.com/results?search_query={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
