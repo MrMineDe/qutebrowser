@@ -98,7 +98,8 @@ c.url.searchengines = {
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
-    '/tw': 'https://www.twitch.tv/search?term={}'
+    '/tw': 'https://www.twitch.tv/search?term={}',
+    '/od': 'https://odysee.com/$/search?q={}'
 }
 
 # Set download settings
