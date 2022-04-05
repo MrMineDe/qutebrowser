@@ -93,13 +93,13 @@ c.url.searchengines = {
     # search github.com with the DEFAULT search engine
     '/sgh': 'https://search.brave.com/search?q=' + "site%3Agithub.com {}",
     '/sgl': 'https://search.brave.com/search?q=' + "site%3Agitlab.com {}",
+    '/od': 'https://odysee.com/$/search?q={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
     '/tw': 'https://www.twitch.tv/search?term={}',
-    '/od': 'https://odysee.com/$/search?q={}'
 }
 
 # Set download settings

@@ -1,12 +1,9 @@
 qkeys qute://help/img/cheatsheet-big.png
-qcmds qute://help/commands.html
-qconf qute://help/configuring.html
-qsets qute://help/settings.html
-ds https://discord.com/channels/@me
 lofi https://www.youtube.com/watch?v=5qap5aO4i9A
+ds https://discord.com/channels/@me
+od https://odysee.com/
 yt https://www.youtube.com/
+tw https://www.twitch.tv/
 gh https://github.com/NYANLAUNCHER
 gh. https://github.com/NYANLAUNCHER/.dotfiles
 mkt https://monkeytype.com/
-tw https://www.twitch.tv/
-od https://odysee.com/
