@@ -253,12 +253,14 @@ config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
 config.bind("<Ctrl-q>", "close")
+#config.bind("d", "")
+#config.bind("d", "tab-close;; tab-focus last")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
-##view yt vid with viewer.video = "mpv"
+## view yt vid with viewer.video = "mpv"
 config.bind(",v", "hint links spawn " + viewer.video + " {hint-url}")
 config.bind(";v", "hint links spawn --detach " + viewer.video + " --force-window yes {hint-url}")
-##hide tabs and cmdline
+## hide tabs and cmdline
 config.bind("xf", "config-cycle tabs.show always never;; config-cycle statusbar.show always never;; config-cycle scrolling.bar when-searching never")
 config.bind("-", "zoom-out")
 config.bind("=", "zoom-in")
@@ -285,7 +287,7 @@ config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
 config.bind("<Ctrl-x><Ctrl-e>", "edit-text",             "insert")
 ## Command mode bindings
-config.unbind("<Ctrl-n>", "command")
-config.unbind("<Ctrl-p>", "command")
-config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
-config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
+#config.unbind("<Ctrl-n>", "", "command")
+#config.unbind("<Ctrl-p>", "", "command")
+#config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
+#config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
