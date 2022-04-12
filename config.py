@@ -253,6 +253,7 @@ config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
 config.bind("<Ctrl-q>", "close")
+config.bind("<Ctrl-o>", "tab-focus last")
 #config.bind("d", "")
 #config.bind("d", "tab-close;; tab-focus last")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
