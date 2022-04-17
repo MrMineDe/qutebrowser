@@ -253,6 +253,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
+config.bind("gs", "open qute://settings")
 config.bind("<Ctrl-q>", "close")
 config.bind("<Ctrl-o>", "tab-focus last")
 #config.bind("d", "")
