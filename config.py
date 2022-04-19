@@ -91,8 +91,8 @@ c.url.default_page = "https://search.brave.com/"
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     # search github.com with the DEFAULT search engine
-    '/sgh': 'https://search.brave.com/search?q=' + "site%3Agithub.com {}",
-    '/sgl': 'https://search.brave.com/search?q=' + "site%3Agitlab.com {}",
+    '/sgh': 'https://www.merriam-webster.com/dictionary/' + "site%3Agithub.com {}",
+    '/sgl': 'https://www.merriam-webster.com/dictionary/' + "site%3Agitlab.com {}",
     '/od': 'https://odysee.com/$/search?q={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
@@ -101,6 +101,7 @@ c.url.searchengines = {
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
     '/tw': 'https://www.twitch.tv/search?term={}',
+    '/dn': 'https://www.merriam-webster.com/dictionary/{}',
 }
 
 # Set download settings
@@ -252,6 +253,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - ask
 config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
+
 # Keybinds
 config.bind("gs", "open qute://settings")
 config.bind("<Ctrl-q>", "close")
@@ -260,19 +262,18 @@ config.bind("<Ctrl-o>", "tab-focus last")
 #config.bind("d", "tab-close;; tab-focus last")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
-## view yt vid with viewer.video = "mpv"
+#view yt vid with viewer.video = "mpv"
 config.bind(",v", "hint links spawn " + viewer.video + " {hint-url}")
 config.bind(";v", "hint links spawn --detach " + viewer.video + " --force-window yes {hint-url}")
-## hide tabs and cmdline
+#hide tabs and cmdline
 config.bind("xf", "config-cycle tabs.show always never;; config-cycle statusbar.show always never;; config-cycle scrolling.bar when-searching never")
 config.bind("-", "zoom-out")
 config.bind("=", "zoom-in")
 config.bind("+", "zoom")
 #config.bind("gM", "")# move a tab to <index> starting from the end
-config.bind("<Ctrl-k>", "tab-move -")
 config.bind("<Ctrl-j>", "tab-move +")
-#config.bind("<Ctrl-Shift-k>", "")# move a tab to <index> starting from the end
-#config.bind("<Ctrl-Shift-j>", "")# move a tab to <index> starting from the beginning
+config.bind("<Ctrl-k>", "tab-move -")
+
 ## Insert mode bindings
 config.bind("<Ctrl-h>", "fake-key <Backspace>",          "insert")
 config.bind("<Ctrl-a>", "fake-key <Home>",               "insert")
@@ -289,6 +290,7 @@ config.bind("<Ctrl-w>", "fake-key <Ctrl-backspace>",     "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
 config.bind("<Ctrl-x><Ctrl-e>", "edit-text",             "insert")
+
 ## Command mode bindings
 #config.unbind("<Ctrl-n>", "", "command")
 #config.unbind("<Ctrl-p>", "", "command")
