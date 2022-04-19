@@ -91,8 +91,8 @@ c.url.default_page = "https://search.brave.com/"
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     # search github.com with the DEFAULT search engine
-    '/sgh': 'https://www.merriam-webster.com/dictionary/' + "site%3Agithub.com {}",
-    '/sgl': 'https://www.merriam-webster.com/dictionary/' + "site%3Agitlab.com {}",
+    '/sgh': 'https://search.brave.com/search?q=site%3Agithub.com {}',
+    '/sgl': 'https://search.brave.com/search?q=site%3Agitlab.com {}',
     '/od': 'https://odysee.com/$/search?q={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
