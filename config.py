@@ -255,6 +255,8 @@ config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 
 # Keybinds
+config.unbind("gC")
+config.bind("gc", "tab-clone")
 config.bind("gs", "open qute://settings")
 config.bind("<Ctrl-q>", "close")
 config.bind("<Ctrl-o>", "tab-focus last")
@@ -292,7 +294,7 @@ config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
 config.bind("<Ctrl-x><Ctrl-e>", "edit-text",             "insert")
 
 ## Command mode bindings
-#config.unbind("<Ctrl-n>", "", "command")
-#config.unbind("<Ctrl-p>", "", "command")
-#config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
-#config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
+config.unbind("<Ctrl-n>", "command")
+config.unbind("<Ctrl-p>", "command")
+config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
+config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
