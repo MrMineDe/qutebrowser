@@ -102,6 +102,7 @@ c.url.searchengines = {
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
+    '/eve': 'https://support.eveonline.com/hc/en-us/search?utf8=✓&query={}',
 }
 
 # Set download settings
