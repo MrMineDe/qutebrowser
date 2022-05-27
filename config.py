@@ -102,7 +102,7 @@ c.url.searchengines = {
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
-    '/eve': 'https://support.eveonline.com/hc/en-us/search?utf8=✓&query={}',
+    '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
 }
 
 # Set download settings
@@ -117,9 +117,9 @@ c.scrolling.bar = "when-searching"
 
 # Set dark mode
 ## TODO: create blacklist to disable theme in certain webpages
-blacklist = [ "https://discord.com/*", "https://www.youtube.com/*" ]
+blacklist = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
 
-config.set("colors.webpage.darkmode.enabled", True)
+#config.set("colors.webpage.darkmode.enabled", True)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
@@ -292,7 +292,6 @@ config.bind("<Ctrl-d>", "fake-key <Delete>",             "insert")
 config.bind("<Ctrl-w>", "fake-key <Ctrl-backspace>",     "insert")
 config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
-config.bind("<Ctrl-x><Ctrl-e>", "edit-text",             "insert")
 
 ## Command mode bindings
 config.unbind("<Ctrl-n>", "command")
