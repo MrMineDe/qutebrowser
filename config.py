@@ -118,7 +118,7 @@ c.scrolling.bar = "when-searching"
 # Set dark mode
 ## TODO: create blacklist to disable theme in certain webpages
 blacklist = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
-config.set("colors.webpage.darkmode.enabled", True)
+c.colors.webpage.darkmode.enabled = True
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
