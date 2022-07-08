@@ -100,7 +100,6 @@ c.url.searchengines = {
     '/sgl': 'https://search.brave.com/search?q=site%3Agitlab.com {}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
-    '/dub': 'https://code.dlang.org/search?q={}',
     '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
 }
 
@@ -115,8 +114,7 @@ c.content.autoplay = False
 c.scrolling.bar = "when-searching"
 
 # Set dark mode
-## TODO: create blacklist to disable theme in certain webpages
-blacklist = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
+theme_blacklist = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
 c.colors.webpage.darkmode.enabled = True
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
@@ -228,21 +226,10 @@ config.set('content.images', True, 'chrome-devtools://*')
 # Type: Bool
 config.set('content.images', True, 'devtools://*')
 
-# Enable JavaScript.
-# Type: Bool
-config.set('content.javascript.enabled', True, 'chrome-devtools://*')
-
-# Enable JavaScript.
-# Type: Bool
-config.set('content.javascript.enabled', True, 'devtools://*')
-
-# Enable JavaScript.
-# Type: Bool
-config.set('content.javascript.enabled', True, 'chrome://*/*')
-
-# Enable JavaScript.
-# Type: Bool
-config.set('content.javascript.enabled', True, 'qute://*/*')
+# Enable JavaScript for certain sites
+enable_js = [ "chrome-devtools://*", "devtools://*", "chrome://*/*", "qute://*/*" ]
+for x in enable_js:
+    config.set('content.javascript.enabled', True, x)
 
 # Allow websites to show notifications.
 # Type: BoolAsk
