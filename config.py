@@ -97,10 +97,10 @@ c.url.searchengines = {
     '/aur': 'https://aur.archlinux.org/packages?={}',
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/sgh': 'https://search.brave.com/search?q=site%3Agithub.com {}',
-    '/sgl': 'https://search.brave.com/search?q=site%3Agitlab.com {}',
     '/lt': 'https://lutris.net/games?q={}',
     '/st': 'https://store.steampowered.com/search/?term={}',
     '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
+    '/wb': 'https://en.wikibooks.org/w/index.php?search={}',
 }
 
 # Set download settings
@@ -114,7 +114,8 @@ c.content.autoplay = False
 c.scrolling.bar = "when-searching"
 
 # Set dark mode
-theme_blacklist = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
+# A list of sites not to apply theme to
+unset_theme = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
 c.colors.webpage.darkmode.enabled = True
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
