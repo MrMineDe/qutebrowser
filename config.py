@@ -68,7 +68,7 @@ c.auto_save.session = True
 c.auto_save.interval = 800
 
 # Set default page
-c.url.default_page = "https://search.brave.com"
+c.url.default_page = "https://search.brave.com/"
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
