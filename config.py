@@ -92,13 +92,10 @@ c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     '/od': 'https://odysee.com/$/search?q={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
-    '/tw': 'https://www.twitch.tv/search?term={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
     '/aur': 'https://aur.archlinux.org/packages?={}',
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/sgh': 'https://search.brave.com/search?q=site%3Agithub.com {}',
-    '/lt': 'https://lutris.net/games?q={}',
-    '/st': 'https://store.steampowered.com/search/?term={}',
     '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
     '/wb': 'https://en.wikibooks.org/w/index.php?search={}',
 }
