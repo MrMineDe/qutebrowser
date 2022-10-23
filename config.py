@@ -65,7 +65,7 @@ c.aliases = {
 
 # Auto save settings
 c.auto_save.session = True
-c.auto_save.interval = 800
+c.auto_save.interval = 80
 
 # Set default page
 c.url.default_page = "https://search.brave.com/"
@@ -90,6 +90,7 @@ c.url.default_page = "https://search.brave.com/"
 # Type: Dict
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
+    '/s': 'https://search.brave.com/search?q=site%3A{}',
     '/od': 'https://odysee.com/$/search?q={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
