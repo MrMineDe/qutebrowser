@@ -113,7 +113,12 @@ c.scrolling.bar = "when-searching"
 
 # Set dark mode
 # A list of sites not to apply theme to
-unset_theme = [ "https://discord.com/*", "https://www.youtube.com/*", "https://www.eveonline.com/*" ]
+unset_theme = [
+   "https://discord.com/*",
+   "https://www.youtube.com/*",
+   "https://www.eveonline.com/*",
+   "https://www.russianpod101.com/",
+]
 c.colors.webpage.darkmode.enabled = True
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
