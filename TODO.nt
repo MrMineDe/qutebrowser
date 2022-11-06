@@ -1,7 +1,7 @@
 
 - TODO:
-  - set content autoplay true for only the current window
-  - set blacklist to NOT load colors(cheme)
+  - create a toggle theme command
+  - set site blacklist to NOT load theme
   - userscripts to load|manage sessions
    - one master session which isn't affected by the other ones
   - ; = : && : = ;
