@@ -17,14 +17,6 @@ import os
 import qutebrowser.api
 from qutebrowser.api import interceptor
 
-# Choose how to view certain data types
-class viewer():
-    media = "mpv"
-    video = "mpv"
-    audio = "mpv"
-    image = "sxiv"
-    pdf = "zathura"
-
 # Editor settings
 c.editor.command = [
     "nvim",
@@ -65,10 +57,11 @@ c.aliases = {
 
 # Auto save settings
 c.auto_save.session = True
-c.auto_save.interval = 80
+c.auto_save.interval = 800
 
 # Set default page
 c.url.default_page = "https://search.brave.com/"
+c.url.start_pages = "https://search.brave.com/"
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`
@@ -119,6 +112,8 @@ unset_theme = [
    "https://www.eveonline.com/*",
    "https://www.russianpod101.com/",
 ]
+# togle theme
+#config.bind("", "")
 c.colors.webpage.darkmode.enabled = True
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
@@ -246,17 +241,26 @@ config.set('content.notifications.enabled', False, 'https://www.youtube.com')
 
 # Keybinds
 config.unbind("gC")
+config.bind("<Ctrl-h>", "home")
 config.bind("gc", "tab-clone")
 config.bind("gs", "open qute://settings")
+config.bind("gh", "help")
 config.bind("<Ctrl-q>", "close")
 config.bind("<Ctrl-o>", "tab-focus last")
-#config.bind("d", "")
-#config.bind("d", "tab-close;; tab-focus last")
+#c.tabs.select_on_remove = "last-used"
+c.tabs.select_on_remove = "next"
+c.tabs.last_close = "startpage"
+#config.bind("d", "tab-close;; tab-focus last or prev")
 config.bind("<Ctrl-n>", "fake-key <Tab>")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>")
-#view yt vid with viewer.video = "mpv"
-config.bind(",v", "hint links spawn " + viewer.video + " {hint-url}")
-config.bind(";v", "hint links spawn --detach " + viewer.video + " --force-window yes {hint-url}")
+#view yt vid with mpv
+config.bind(",v", "spawn --detach mpv --force-window=yes {url}")
+config.bind(";v", "hint links spawn --detach mpv --force-window=yes {hint-url}")
+#manage playlist
+config.bind("po", "message-info 'mpv open current yt playlist, don't download'")
+config.bind("ps", "message-info 'save yt playlist'")
+config.bind("pd", "message-info 'delete yt playlist, if not specifed, goes to playlist manager'")
+
 #hide tabs and cmdline
 config.bind("xf", "config-cycle tabs.show always never;; config-cycle statusbar.show always never;; config-cycle scrolling.bar when-searching never")
 config.bind("-", "zoom-out")
@@ -287,3 +291,4 @@ config.unbind("<Ctrl-n>", "command")
 config.unbind("<Ctrl-p>", "command")
 config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
+

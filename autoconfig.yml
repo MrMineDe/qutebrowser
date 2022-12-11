@@ -6,5 +6,49 @@
 
 config_version: 2
 settings:
-  colors.webpage.darkmode.enabled:
-    global: true
+  bindings.commands:
+    global:
+      command:
+        <Ctrl+n>: fake-key <Tab>
+        <Ctrl+p>: fake-key <Shift-Tab>
+      insert:
+        <Alt+b>: fake-key <Ctrl-Left>
+        <Alt+d>: fake-key <Ctrl-Delete>
+        <Alt+f>: fake-key <Ctrl-Right>
+        <Ctrl+a>: fake-key <Home>
+        <Ctrl+b>: fake-key <Left>
+        <Ctrl+d>: fake-key <Delete>
+        <Ctrl+e>: fake-key <End>
+        <Ctrl+f>: fake-key <Right>
+        <Ctrl+h>: fake-key <Backspace>
+        <Ctrl+k>: fake-key <Shift-End><Delete>
+        <Ctrl+n>: fake-key <Down>
+        <Ctrl+p>: fake-key <Up>
+        <Ctrl+u>: fake-key <Shift-Home><Delete>
+        <Ctrl+w>: fake-key <Ctrl-backspace>
+      normal:
+        +: zoom
+        ',v': spawn --detach mpv --force-window=yes {url}
+        '-': zoom-out
+        ;v: hint links spawn --detach mpv --force-window=yes {hint-url}
+        <Ctrl+h>: home
+        <Ctrl+j>: tab-move +
+        <Ctrl+k>: tab-move -
+        <Ctrl+n>: fake-key <Tab>
+        <Ctrl+o>: tab-focus last
+        <Ctrl+p>: fake-key <Shift-Tab>
+        <Ctrl+q>: close
+        '=': zoom-in
+        gC: null
+        gc: tab-clone
+        gh: help
+        gs: open qute://settings
+        pd: message-info 'delete yt playlist, if not specifed, goes to playlist manager'
+        po: message-info 'mpv open current yt playlist, don't download'
+        ps: message-info 'save yt playlist'
+        xf: config-cycle tabs.show always never;; config-cycle statusbar.show always
+          never;; config-cycle scrolling.bar when-searching never
+  url.default_page:
+    global: https://search.brave.com/
+  url.start_pages:
+    global: https://search.brave.com/

@@ -1,9 +1,12 @@
 
 - TODO:
+  - mpv open yt/odysee vid at current time
+  - setup userscripts/playlist.lua
   - create a toggle theme command
   - set site blacklist to NOT load theme
   - userscripts to load|manage sessions
    - one master session which isn't affected by the other ones
   - ; = : && : = ;
-  - set j|k to scroll by default, not change volume in yt
-  - greasemonkey script(s) to block ads
+  - set j|k to scroll, not change volume in yt
+  - greasemonkey script(s) to block ads on yt
+
