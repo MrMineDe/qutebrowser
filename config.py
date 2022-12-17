@@ -246,6 +246,7 @@ config.bind("gc", "tab-clone")
 config.bind("gs", "open qute://settings")
 config.bind("gh", "help")
 config.bind("<Ctrl-q>", "close")
+#make this goto the last scroll percentage
 config.bind("<Ctrl-o>", "tab-focus last")
 #c.tabs.select_on_remove = "last-used"
 c.tabs.select_on_remove = "next"
@@ -260,6 +261,9 @@ config.bind(";v", "hint links spawn --detach mpv --force-window=yes {hint-url}")
 config.bind("po", "message-info 'mpv open current yt playlist, don't download'")
 config.bind("ps", "message-info 'save yt playlist'")
 config.bind("pd", "message-info 'delete yt playlist, if not specifed, goes to playlist manager'")
+config.unbind("gm")
+config.bind("gm", "bookmark-list")
+config.bind("gM", "tab-move")
 
 #hide tabs and cmdline
 config.bind("xf", "config-cycle tabs.show always never;; config-cycle statusbar.show always never;; config-cycle scrolling.bar when-searching never")

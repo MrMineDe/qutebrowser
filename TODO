@@ -1,11 +1,14 @@
 
 - TODO:
+  - <Ctrl-o> scroll back to last percentage
   - mpv open yt/odysee vid at current time
+  - create lua lib for qutebrowser userscripts
   - setup userscripts/playlist.lua
+  - keybind to copy current url
   - create a toggle theme command
-  - set site blacklist to NOT load theme
+   - set site blacklist to NOT load theme
+  - search starting from current point in page
   - userscripts to load|manage sessions
-   - one master session which isn't affected by the other ones
   - ; = : && : = ;
   - set j|k to scroll, not change volume in yt
   - greasemonkey script(s) to block ads on yt

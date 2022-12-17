@@ -1,3 +1,4 @@
 #!/bin/bash
-# Manage dependencies for qutebrowser
+# Manage dependencies for my qutebrowser config
+echo "Deps ="
 
