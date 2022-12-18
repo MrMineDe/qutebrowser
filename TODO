@@ -4,7 +4,6 @@
   - mpv open yt/odysee vid at current time
   - create lua lib for qutebrowser userscripts
   - setup userscripts/playlist.lua
-  - keybind to copy current url
   - create a toggle theme command
    - set site blacklist to NOT load theme
   - search starting from current point in page

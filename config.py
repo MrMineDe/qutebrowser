@@ -245,6 +245,7 @@ config.bind("<Ctrl-h>", "home")
 config.bind("gc", "tab-clone")
 config.bind("gs", "open qute://settings")
 config.bind("gh", "help")
+config.bind(",h", "set-cmd-text -s :help ")
 config.bind("<Ctrl-q>", "close")
 #make this goto the last scroll percentage
 config.bind("<Ctrl-o>", "tab-focus last")
@@ -291,8 +292,8 @@ config.bind("<Ctrl-u>", "fake-key <Shift-Home><Delete>", "insert")
 config.bind("<Ctrl-k>", "fake-key <Shift-End><Delete>",  "insert")
 
 ## Command mode bindings
-config.unbind("<Ctrl-n>", "command")
-config.unbind("<Ctrl-p>", "command")
+config.unbind("<Ctrl-n>", mode="command")
+config.unbind("<Ctrl-p>", mode="command")
 config.bind("<Ctrl-n>", "fake-key <Tab>",       "command")
 config.bind("<Ctrl-p>", "fake-key <Shift-Tab>", "command")
 

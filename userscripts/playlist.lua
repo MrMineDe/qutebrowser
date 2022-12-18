@@ -13,13 +13,27 @@ local function get_queue()
 return pl end
 
 
--- convert playlist to pls format
+-- convert playlist to table of playlist entries
 local function get_playlist()
   local pl = {}-- the playlist
 return pl end
 
 
--- save the current playlist to a pls file
+-- add entry to existing playlist
+--- name = filename or playlist name
+--- add = playlist entry
+local function playlist_add(name, add)
+end
+
+
+-- remove entry from existing playlist
+--- name = filename or playlist name
+--- del = title or url of entry to delete
+local function playlist_del(name, del)
+end
+
+
+-- save playlist to a pls file
 local function save_playlist(name, playlist)
   local file = pl_dir .. name .. ".pls"
   local contents = "[playlist]\n"--save the file contents
