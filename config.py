@@ -92,6 +92,7 @@ c.url.searchengines = {
     '/sgh': 'https://search.brave.com/search?q=site%3Agithub.com {}',
     '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
     '/wb': 'https://en.wikibooks.org/w/index.php?search={}',
+    '/cs': 'http://cht.sh/{}',
 }
 
 # Set download settings
