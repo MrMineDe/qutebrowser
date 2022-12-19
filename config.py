@@ -84,19 +84,20 @@ c.url.start_pages = "https://search.brave.com/"
 c.url.searchengines = {
     'DEFAULT': 'https://search.brave.com/search?q={}',
     '/s': 'https://search.brave.com/search?q=site%3A{}',
-    '/od': 'https://odysee.com/$/search?q={}',
+    '/wb': 'https://en.wikibooks.org/w/index.php?search={}',
+    '/wp': 'https://en.wikipedia.org/w/index.php?search={}',
     '/yt': 'https://www.youtube.com/results?search_query={}',
+    '/od': 'https://odysee.com/$/search?q={}',
     '/aw': 'https://wiki.archlinux.org/?search={}',
     '/aur': 'https://aur.archlinux.org/packages?={}',
     '/gh': 'https://github.com/NYANLAUNCHER?tab=repositories&q={}',
     '/sgh': 'https://search.brave.com/search?q=site%3Agithub.com {}',
     '/eu': 'https://wiki.eveuniversity.org/index.php?search={}',
-    '/wb': 'https://en.wikibooks.org/w/index.php?search={}',
     '/cs': 'http://cht.sh/{}',
 }
 
 # Set download settings
-c.downloads.location.directory = "~/tmp/downloads"
+c.downloads.location.directory = os.getenv('XDG_DOWNLOADS_DIR', '~/tmp/')
 c.downloads.remove_finished = 3 #seconds
 
 # Set content settings
